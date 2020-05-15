@@ -1,0 +1,15 @@
+describe('OnlineShoePortalUserRegistration', () => {
+    it('UserRegistration', () => {
+      cy.visit('https://anupdamoda.github.io/AceOnlineShoePortal/')
+      cy.get('input').click()
+      cy.get('a[href*="SignIn.html"]').click({force:true})
+      cy.get('#NewRegistration').click()
+      cy.get('#firstname').type('Robert')
+      cy.get('#lastname').type('Dunett')
+      cy.get('#emailId').type('Robert.Dunett@gmail.com')
+      cy.get('#contactNumber').type('+61-232323223')
+      cy.get('#usr').type('Robert.Dunnett@gmail.com')
+      cy.get('#pwd').type('**********')
+      cy.contains('Submit').click()
+    })
+  })
